@@ -1,5 +1,6 @@
 .main {
   margin-top: 5em;
+  padding: 0 1em;
 }
 
 .text_content {
@@ -117,4 +118,26 @@
   font-family: inherit;
   /* Microsoft Edge */
   color: #fff;
+}
+
+@media (max-width: 600px) {
+  .form_input--container {
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    height: auto;
+  }
+
+  .form_input--container input {
+    width: 90%;
+    height: 100px;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+  }
+
+  .form_input--container button {
+    width: 90%;
+    margin: 0 auto;
+    height: 65px;
+  }
 }
