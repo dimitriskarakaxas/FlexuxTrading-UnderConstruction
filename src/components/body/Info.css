@@ -120,6 +120,22 @@
   color: #fff;
 }
 
+@media (max-width: 700px) {
+  .subscription_form_wrapper::before {
+    content: "";
+    background: url("./background.png");
+    position: absolute;
+    bottom: -200px;
+    left: -100px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 750px;
+    height: 750px;
+    z-index: -1;
+  }
+}
+
 @media (max-width: 600px) {
   .form_input--container {
     flex-direction: column;
@@ -139,5 +155,19 @@
     width: 90%;
     margin: 0 auto;
     height: 65px;
+  }
+
+  .subscription_form_wrapper::before {
+    content: "";
+    background: url("./background.png");
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 500px;
+    height: 500px;
+    z-index: -1;
   }
 }
