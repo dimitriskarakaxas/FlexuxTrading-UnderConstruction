@@ -4,12 +4,7 @@ import "./App.css";
 
 function App() {
   return (
-    <div
-      className="application_wrapper"
-      // style={{
-      //   backgroundImage: `url(${process.env.PUBLIC_URL + "/background.png"})`,
-      // }}
-    >
+    <div className="application_wrapper">
       <Header />
       <Info />
     </div>

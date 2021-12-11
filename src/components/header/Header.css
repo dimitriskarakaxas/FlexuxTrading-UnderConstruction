@@ -1,4 +1,8 @@
-.header {
+header {
+  position: relative;
+}
+
+.navigation {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,4 +20,16 @@
   background: #3593f2;
   top: 126px;
   left: 0;
+}
+
+@media (max-width: 750px) {
+  .navigation {
+    height: 190px;
+    flex-direction: column;
+    padding: 1em 0;
+  }
+
+  .header::after {
+    top: 191px;
+  }
 }
