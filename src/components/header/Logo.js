@@ -4,7 +4,7 @@ import "./Logo.css";
 const Logo = () => {
   return (
     <a href="/" className="logo">
-      <img src="/logo192.png" alt="Logo" />
+      <img src="/website-logo.png" alt="Logo" />
     </a>
   );
 };

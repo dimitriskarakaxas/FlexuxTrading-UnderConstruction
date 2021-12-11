@@ -23,7 +23,7 @@
 
 .subscription_form {
   background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(40px);
+  backdrop-filter: blur(15px);
   /* Note: backdrop-filter has minimal browser support */
 
   border-radius: 8px;
@@ -31,6 +31,21 @@
   margin: 2em auto;
   text-align: center;
   padding: 1em 0 1.5em 0;
+}
+
+.subscription_form::after {
+  content: "";
+  background: url("./background.png");
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translate(-27%, 33%);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 1250px;
+  height: 1000px;
+  z-index: -5;
 }
 
 .subscription_form h2 {
@@ -65,13 +80,13 @@
 
 .form_input--container input:active,
 .form_input--container input:focus {
-  border-color: #0dc5d4;
+  border-color: #3593f2;
 }
 
 .form_input--container button {
   width: 27%;
   font-family: "Poppins";
-  background: #e00f49;
+  background: #3593f2;
   color: #fff;
   border: 0;
   font-weight: 500;

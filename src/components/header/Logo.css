@@ -1,3 +1,8 @@
+.logo {
+  display: block;
+}
+
 .logo img {
-  max-width: 100px;
+  max-width: 185px;
+  display: block;
 }
