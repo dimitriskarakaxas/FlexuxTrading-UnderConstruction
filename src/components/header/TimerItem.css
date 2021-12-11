@@ -1,0 +1,22 @@
+.timerItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timerItem + .timerItem {
+  margin-left: 2rem;
+}
+
+.timerItem > div + div {
+  text-transform: capitalize;
+}
+
+.timer_number {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.timer_label {
+  font-size: 1rem;
+}
