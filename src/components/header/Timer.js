@@ -35,7 +35,7 @@ const Timer = () => {
   const timerComponents = [];
 
   Object.keys(timeLeft).forEach((interval) => {
-    if (!timeLeft[interval]) {
+    if (!timeLeft[interval] && timeLeft[interval] !== 0) {
       return;
     }
 

@@ -12,13 +12,15 @@ const Info = () => {
           From All Around The World
         </p>
       </div>
-      <form className="subscription_form">
-        <h2>Get Notified</h2>
-        <div className="form_input--container">
-          <input placeholder="Your Email" />
-          <button>Notify Me</button>
-        </div>
-      </form>
+      <div className="subscription_form_wrapper">
+        <form className="subscription_form">
+          <h2>Get Notified</h2>
+          <div className="form_input--container">
+            <input placeholder="Your Email" />
+            <button>Notify Me</button>
+          </div>
+        </form>
+      </div>
     </main>
   );
 };

@@ -5,16 +5,15 @@
   max-width: 1250px;
   width: 85%;
   margin: 0 auto;
-  position: relative;
   height: 125px;
 }
 
 .header::after {
   content: "";
   position: absolute;
-  width: 200vw;
-  height: 3px;
+  width: 100%;
+  height: 1px;
   background: #3593f2;
-  bottom: -3px;
-  left: -20%;
+  top: 126px;
+  left: 0;
 }

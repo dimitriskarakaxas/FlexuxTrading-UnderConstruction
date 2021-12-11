@@ -21,31 +21,34 @@
   line-height: 2;
 }
 
+.subscription_form_wrapper {
+  position: relative;
+  max-width: 35rem;
+  margin: 2em auto;
+}
+
 .subscription_form {
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(15px);
   /* Note: backdrop-filter has minimal browser support */
 
   border-radius: 8px;
-  max-width: 35rem;
-  margin: 2em auto;
   text-align: center;
   padding: 1em 0 1.5em 0;
 }
 
-.subscription_form::after {
+.subscription_form_wrapper::before {
   content: "";
   background: url("./background.png");
   position: absolute;
-  bottom: 0;
-  left: 0;
-  transform: translate(-27%, 33%);
+  bottom: -450px;
+  left: -320px;
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
   width: 1250px;
-  height: 1000px;
-  z-index: -5;
+  height: 1250px;
+  z-index: -1;
 }
 
 .subscription_form h2 {
