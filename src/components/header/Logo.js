@@ -1,10 +1,10 @@
 import React from "react";
 import "./Logo.css";
 
-const Logo = () => {
+const Logo = (props) => {
   return (
     <a href="/" className="logo">
-      <img src="/website-logo.png" alt="Logo" />
+      <img src={props.path} alt="Logo" />
     </a>
   );
 };

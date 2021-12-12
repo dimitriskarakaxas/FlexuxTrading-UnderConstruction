@@ -12,14 +12,29 @@
   font-size: 1.5rem;
 }
 
+.flexus_color {
+  color: #27a4f5;
+}
+
+.terra_greca_color {
+  color: #b99d58;
+}
+
 .title {
-  font-size: 4rem;
-  margin: 0.6em 0;
+  font-size: 3rem;
+  margin: 1.2em 0 0;
+  font-weight: 500;
 }
 
 .extra_paragraph {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   line-height: 2;
+}
+
+.closing_text {
+  font-size: 0.65rem;
+  line-height: 2.5;
+  letter-spacing: 0.8px;
 }
 
 .subscription_form_wrapper {
@@ -40,9 +55,9 @@
 
 .subscription_form_wrapper::before {
   content: "";
-  background: url("./background.png");
+  background: url("./Background2.png");
   position: absolute;
-  bottom: -450px;
+  bottom: -475px;
   left: -320px;
   background-position: center;
   background-size: contain;

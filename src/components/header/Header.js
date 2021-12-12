@@ -6,8 +6,9 @@ const Header = () => {
   return (
     <header className="header">
       <nav className="navigation">
-        <Logo />
+        <Logo path="/website-logo.png" />
         <Timer />
+        <Logo path="/terra-greca-logo.png" />
       </nav>
     </header>
   );
