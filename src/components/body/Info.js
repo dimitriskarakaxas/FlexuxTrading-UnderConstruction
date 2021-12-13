@@ -41,7 +41,7 @@ const Info = () => {
         <p className="comming_soon">Coming Soon</p>
         <h1 className="title">ADVANCED FLEXUS PARTNERSHIP</h1>
         <p className="extra_paragraph">
-          <span className="flexus_color">FlEXUS INTERNATIONAL TRADING</span> is
+          <span className="flexus_color">FLEXUS INTERNATIONAL TRADING</span> is
           a leading producer of Fine Greek Food Products <br /> under the{" "}
           <span className="terra_greca_color">TERRA GRECA</span> brand.
         </p>
