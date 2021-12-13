@@ -1,38 +1,39 @@
+import React, { useState } from "react";
 import "./Info.css";
 
 const Info = () => {
-  // const emailRef = useRef(null);
+  const [enteredEmail, setEnteredEmail] = useState("");
 
-  // const submitHandler = (event) => {
-  //   event.preventDefault();
+  const emailChangeHandler = (event) => {
+    setEnteredEmail(event.target.value);
+  };
 
-  //   const enteredEmail = emailRef?.current?.value;
-  //   const [isSuccessTrue, setIsSuccessTrue] = useState(false);
+  const submitFormHandler = async (event) => {
+    event.preventDefault();
 
-  //   if (!enteredEmail || !enteredEmail.includes("@")) {
-  //     console.log("Invalid input.");
-  //     return;
-  //   }
+    const fetchOptions = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email: enteredEmail }),
+    };
 
-  //   fetch("https://shrouded-shore-56422.herokuapp.com/subscribe", {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //     body: JSON.stringify({ email: enteredEmail }),
-  //   })
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       console.log("Success:", data);
-  //       setIsSuccessTrue(true);
-  //     })
-  //     .catch((error) => {
-  //       console.error("Error:", error);
-  //       setIsSuccessTrue(false);
-  //     });
+    try {
+      const response = await fetch(
+        "https://shrouded-shore-56422.herokuapp.com/subscribe",
+        fetchOptions
+      );
 
-  //   emailRef.current.value = "";
-  // };
+      const result = await response.json();
+
+      console.log(result);
+    } catch (error) {
+      console.log(error);
+    }
+
+    setEnteredEmail("");
+  };
 
   return (
     <main className="main">
@@ -46,10 +47,14 @@ const Info = () => {
         </p>
       </div>
       <div className="subscription_form_wrapper">
-        <form className="subscription_form">
+        <form className="subscription_form" onSubmit={submitFormHandler}>
           <h2>Get Notified</h2>
           <div className="form_input--container">
-            <input placeholder="Your Email" />
+            <input
+              placeholder="Your Email"
+              value={enteredEmail}
+              onChange={emailChangeHandler}
+            />
             <button>Notify Me</button>
           </div>
         </form>
