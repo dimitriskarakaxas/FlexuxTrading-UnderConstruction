@@ -3,13 +3,22 @@ import "./Info.css";
 
 const Info = () => {
   const [enteredEmail, setEnteredEmail] = useState("");
+  const [emailIsValid, setEmailIsValid] = useState(true);
 
   const emailChangeHandler = (event) => {
+    if (event.target.value.trim().length > 0) {
+      setEmailIsValid(true);
+    }
     setEnteredEmail(event.target.value);
   };
 
   const submitFormHandler = async (event) => {
     event.preventDefault();
+
+    if (enteredEmail.trim().length === 0) {
+      setEmailIsValid(false);
+      return;
+    }
 
     const fetchOptions = {
       method: "POST",
@@ -51,7 +60,12 @@ const Info = () => {
           <h2>Get Notified</h2>
           <div className="form_input--container">
             <input
-              placeholder="Your Email"
+              style={{
+                borderColor: !emailIsValid ? "red" : "#fff",
+              }}
+              placeholder={
+                !emailIsValid ? "Give an email to continue..." : "Your Email"
+              }
               value={enteredEmail}
               onChange={emailChangeHandler}
             />
