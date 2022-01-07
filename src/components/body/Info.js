@@ -60,8 +60,9 @@ const Info = () => {
           <h2>Get Notified</h2>
           <div className="form_input--container">
             <input
+              className={`${!emailIsValid ? "invalid-input" : ""}`}
               style={{
-                borderColor: !emailIsValid ? "red" : "#fff",
+                borderColor: !emailIsValid ? "#ff0000" : "#fff",
               }}
               placeholder={
                 !emailIsValid ? "Give an email to continue..." : "Your Email"

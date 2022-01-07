@@ -4,7 +4,7 @@ import TimerItem from "./TimerItem";
 import "./Timer.css";
 
 const calculateTimeLeft = () => {
-  const siteLaunchingDate = "01/01/2022";
+  const siteLaunchingDate = "01/20/2022";
 
   const difference = +new Date(siteLaunchingDate) - +new Date();
 
